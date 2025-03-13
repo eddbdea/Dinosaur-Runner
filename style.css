@@ -1,6 +1,6 @@
 .main {
     margin-top: 30px;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 .images {
@@ -31,5 +31,3 @@
     background-size: cover;
     left: 25px;
 }
-
-
