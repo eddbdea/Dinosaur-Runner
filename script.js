@@ -6,6 +6,9 @@ window.addEventListener("keydown", dinosaurJump);
 
 function dinosaurJump(event) {
     if (event.keyCode == spaceKey) {
-        dinosaur.style.bottom = (jump + 50) + 'px';
+        dinosaur.style.bottom = (jump + 75) + 'px';
+        setTimeout(() => {
+            dinosaur.style.bottom = 0;
+        }, 1000);
     }
 }
