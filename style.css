@@ -1,0 +1,35 @@
+.main {
+    margin-top: 30px;
+    min-height: 100vh;
+}
+
+.images {
+    width: 800px;
+    margin-top: 50px;
+}
+
+.bold-green {
+    font-weight: bold;
+    color: #A5CBBE;
+}
+
+.game-board {
+    margin-top: 50px;
+    width: 800px;
+    height: 500px;
+    border: solid black 1px;
+    background-image: url("images/game-backround.png");
+    position: relative;
+}
+
+#dinosaur {
+    background-image: url("images/trex.svg");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    background-size: cover;
+    left: 25px;
+}
+
+
