@@ -1,6 +1,7 @@
 .main {
     margin-top: 30px;
-    min-height: 80vh;
+    width: 800px;
+    text-align: center;
 }
 
 .images {
@@ -29,5 +30,38 @@
     position: absolute;
     bottom: 0px;
     background-size: cover;
-    left: 25px;
+    left: 40px; 
+}
+
+#obstacle-cactus {
+    background-image: url("images/cactus-obstacle.svg");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 750px;
+}
+
+#obstacle-bird {
+    background-image: url("images/bird.svg");
+    background-size: cover;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    bottom: 50px;
+    left: 750px;
+    display: none;
+}
+
+#score {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #456b5f;
+}
+
+.btn-color {
+    background-color: #A5CBBE;
+    border-color: #A5CBBE;
 }

@@ -10,22 +10,26 @@
     <title>Dinosaur Runner</title>
   </head>
   <body>
-    <div class="container-fluid main">
-        <h1 style="text-align: center;">Dinosaur Runner Game <img src="images/trex.svg" height="30px"></h1>
-        <div class="container-fluid images">
-            <div>
-                <img src="images/spacebar.png" width="400px">
-                <h2 style="display: inline;"> Use <span class="bold-green">spacebar</span> to jump!</h2>
-            </div>
-            <br>
-            <div>
-                <img src="images/arrow-keydown.png" height="100px">
-                <h2 style="display: inline;"> Use <span class="bold-green">arrow-key down</span> to crouch!</h2>
-            </div>
+    <div class="container-fluid main" id="game-content">
+      <h1 style="text-align: center;">Dinosaur Runner Game <img src="images/trex.svg" height="30px"></h1>
+      <div class="container-fluid images">
+        <div>
+          <img src="images/spacebar.png" width="400px">
+          <h2 style="display: inline;"> Use <span class="bold-green">spacebar</span> to jump!</h2>
         </div>
-        <div class="container-fluid game-board">
-            <div id="dinosaur"></div>
+        <div class="mt-3"></div>
+        <div>
+          <img src="images/arrow-keydown.png" height="100px">
+          <h2 style="display: inline;"> Use <span class="bold-green">arrow-key down</span> to crouch!</h2>
         </div>
+      </div>
+      <div class="container-fluid game-board" id="main-game">
+        <div id ="score"><h5 id="live-score">SCORE: 0</h5></div>
+        <div id="dinosaur"></div>
+        <div id="obstacle-cactus"></div>
+        <div id="obstacle-bird"></div>
+      </div>
+      <div class="mt-3"></div>
     </div>
     <script src="script.js"></script>
   </body>
