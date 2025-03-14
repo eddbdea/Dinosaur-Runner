@@ -6,3 +6,5 @@ Here are the game rules:
 - use ARROW-KEYDOWN to crouch;
 - your objective is to dodge every obstacle coming your way, every dodged obstacle gives you +1 point;
 - at object collision game will end and you will see your final score;
+
+Enjoy and have fun playing!
