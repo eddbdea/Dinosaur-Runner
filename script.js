@@ -9,10 +9,10 @@ const previousObjDistance = 60;
 const spaceKey = '32';
 const arrowDownKey = '40';
 const aditionalSpeed = 15;
-const FIVE_SECONDS = 5000;
-const ONE_SECOND = 1000;
-const HUNDRED = 100;
-const SEVENTY_FIVE = 75;
+const FIVE_SECONDS_MS = 5000;
+const ONE_SECOND_MS = 1000;
+const HUNDRED_PX = 100;
+const SEVENTY_FIVE_PX = 75;
 const FIFTY = 50;
 const BIRD_COLLISION = 150;
 let startingSpeed = 250;
@@ -25,19 +25,19 @@ window.addEventListener('keydown', dinosaurMovment);
 setTimeout(() => {
     birdObstacle.style['display'] = 'block';
     birdMovment = setInterval(moveBirdObstacle, startingSpeed);
-}, 2 * ONE_SECOND);
+}, 2 * ONE_SECOND_MS);
 
 function dinosaurMovment(event) {
     if (event.keyCode == spaceKey) { 
-        dinosaur.style.bottom = (jump + SEVENTY_FIVE) + 'px';
+        dinosaur.style.bottom = (jump + SEVENTY_FIVE_PX) + 'px';
         setTimeout(() => {
             dinosaurRetrace();
-        }, ONE_SECOND); 
+        }, ONE_SECOND_MS); 
     } else if (event.keyCode == arrowDownKey) {
         dinosaurSize(FIFTY);
         setTimeout(() => {
-            dinosaurSize(HUNDRED);
-        }, ONE_SECOND);
+            dinosaurSize(HUNDRED_PX);
+        }, ONE_SECOND_MS);
     }
 }
 
@@ -48,7 +48,7 @@ function dinosaurSize(noPixels) {
 
 function dinosaurRetrace() {
     dinosaur.style.bottom = 0 + 'px';
-    dinosaur.style.height = HUNDRED + 'px';
+    dinosaur.style.height = HUNDRED_PX + 'px';
 }
 
 function moveCactusObstacle() {
@@ -79,7 +79,7 @@ function moveBirdObstacle() {
 const obstaclesMovment = setInterval(moveCactusObstacle, startingSpeed); 
 const increaseSpeed = setInterval(() => {
     startingSpeed -= aditionalSpeed;
-}, FIVE_SECONDS); 
+}, FIVE_SECONDS_MS); 
 
 function checkCollisionCactus(obstacleLeft, dinosaurLeft, dinosaurBtm, obsPos) {
     if (obstacleLeft - previousObjDistance === dinosaurLeft &&
@@ -93,7 +93,7 @@ function checkCollisionCactus(obstacleLeft, dinosaurLeft, dinosaurBtm, obsPos) {
 
 function checkCollisionBird(obstacleLeft, obstaclePosition) { 
     if ((obstacleLeft === BIRD_COLLISION || obstacleLeft >= FIFTY &&
-        obstacleLeft <= HUNDRED) && dinosaur.style.height === "100px") {
+        obstacleLeft <= HUNDRED_PX) && dinosaur.style.height === "100px") {
         restartGame();
         return true;
     }
