@@ -72,7 +72,7 @@ function moveBirdObstacle() {
         const obstacleLeft = Math.floor(obstacleRect.left - gameBoardRect.left);
         checkCollisionBird(obstacleLeft, obstaclePosition);
     } else {
-        restoreObstaclePosition(birdObstacle);
+        restoreObstaclePosition(birdObstacle); 
     }
 }
 
