@@ -1,4 +1,4 @@
-Dinosaur Runner game!
+# Dinosaur Runner
 
 Dinosaur Runner game is a fun easy to play game where you play as a dinosaur and you are trying to avoid obstacles either by jumping over them, or by dodging.
 Here are the game rules:
