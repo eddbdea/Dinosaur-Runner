@@ -1,3 +1,10 @@
+const FIVE_SECONDS_MS = 5000;
+const ONE_SECOND_MS = 1000;
+const HUNDRED_PX = 100;
+const SEVENTY_FIVE_PX = 75;
+const FIFTY = 50;
+const BIRD_COLLISION = 150;
+
 const dinosaur = document.getElementById('dinosaur');
 const cactusObstacle = document.getElementById('obstacle-cactus');
 const birdObstacle = document.getElementById('obstacle-bird');
@@ -9,12 +16,6 @@ const previousObjDistance = 60;
 const spaceKey = '32';
 const arrowDownKey = '40';
 const aditionalSpeed = 15;
-const FIVE_SECONDS_MS = 5000;
-const ONE_SECOND_MS = 1000;
-const HUNDRED_PX = 100;
-const SEVENTY_FIVE_PX = 75;
-const FIFTY = 50;
-const BIRD_COLLISION = 150;
 let startingSpeed = 250;
 let score = 0;
 let birdMovment;
