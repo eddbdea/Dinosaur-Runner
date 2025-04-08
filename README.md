@@ -1,10 +1,12 @@
-# Dinosaur Runner
+# 🦖 Dinosaur Runner
 
-Dinosaur Runner game is a fun easy to play game where you play as a dinosaur and you are trying to avoid obstacles either by jumping over them, or by dodging.
-Here are the game rules:
-- use SPACE to jump;
-- use ARROW-KEYDOWN to crouch;
-- your objective is to dodge every obstacle coming your way, every dodged obstacle gives you +1 point;
-- at object collision game will end and you will see your final score;
+**Dinosaur Runner** is a simple and addictive endless runner game where you play as a speedy dinosaur dodging obstacles in your path. Jump, crouch, and survive as long as you can to get the highest score!
 
-Enjoy and have fun playing!
+## 🎮 How to Play
+
+- Press `SPACE` to **jump** over obstacles
+- Press `Arrow Down` to **crouch** under obstacles
+- Every successfully dodged obstacle gives you **+1 point**
+- If you collide with an obstacle, the game ends and your final score is shown
+
+Sounds easy? Give it a try and see how far you can run!
