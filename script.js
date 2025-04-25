@@ -4,6 +4,7 @@ const HUNDRED_PX = 100;
 const SEVENTY_FIVE_PX = 75;
 const FIFTY = 50;
 const BIRD_COLLISION = 150;
+const DINOSAUR_COLLISION = 100;
 
 const dinosaur = document.getElementById('dinosaur');
 const cactusObstacle = document.getElementById('obstacle-cactus');
@@ -12,7 +13,7 @@ const gameBoard = document.getElementById('main-game');
 const gameContent = document.getElementById('game-content');
 const gameBoardRect = gameBoard.getBoundingClientRect();
 const initialStartingPoint = 750;
-const previousObjDistance = 60;
+const previousObjDistance = 50;
 const spaceKey = '32';
 const arrowDownKey = '40';
 const aditionalSpeed = 15;
@@ -59,12 +60,16 @@ function moveCactusObstacle() {
         const obstacleRect = cactusObstacle.getBoundingClientRect();
         const dinosaurBottom = Math.floor(gameBoardRect.bottom - dinosaurRect.bottom);
         const obstacleLeft = Math.floor(obstacleRect.left - gameBoardRect.left);
-        const dinosaurLeft = Math.floor(dinosaurRect.left - gameBoardRect.left);
-        checkCollisionCactus(obstacleLeft, dinosaurLeft, dinosaurBottom, obstaclePosition);
+        checkCollisionCactus(obstacleLeft, dinosaurBottom, obstaclePosition);
     } else {
         restoreObstaclePosition(cactusObstacle);
     }
 }
+
+const obstaclesMovment = setInterval(moveCactusObstacle, startingSpeed); 
+const increaseSpeed = setInterval(() => {
+    startingSpeed -= aditionalSpeed;
+}, FIVE_SECONDS_MS); 
 
 function moveBirdObstacle() {
     const obstaclePosition = positionX(birdObstacle);
@@ -77,13 +82,12 @@ function moveBirdObstacle() {
     }
 }
 
-const obstaclesMovment = setInterval(moveCactusObstacle, startingSpeed); 
-const increaseSpeed = setInterval(() => {
-    startingSpeed -= aditionalSpeed;
-}, FIVE_SECONDS_MS); 
-
-function checkCollisionCactus(obstacleLeft, dinosaurLeft, dinosaurBtm, obsPos) {
-    if (obstacleLeft - previousObjDistance === dinosaurLeft &&
+function checkCollisionCactus(obstacleLeft, dinosaurBtm, obsPos) {
+    if (obstacleLeft % 10 != 0 && dinosaurBtm % 10 != 0) {
+        obstacleLeft -= 1;
+        dinosaurBtm -= 1;
+    }
+    if (obstacleLeft === DINOSAUR_COLLISION &&
         dinosaurBtm === 0) { 
         restartGame();
         return true;
@@ -92,7 +96,10 @@ function checkCollisionCactus(obstacleLeft, dinosaurLeft, dinosaurBtm, obsPos) {
     return false;
 }
 
-function checkCollisionBird(obstacleLeft, obstaclePosition) { 
+function checkCollisionBird(obstacleLeft, obstaclePosition) {
+    if (obstacleLeft % 10 != 0) {
+        obstacleLeft -= 1;
+    }
     if ((obstacleLeft === BIRD_COLLISION || obstacleLeft >= FIFTY &&
         obstacleLeft <= HUNDRED_PX) && dinosaur.style.height === "100px") {
         restartGame();
