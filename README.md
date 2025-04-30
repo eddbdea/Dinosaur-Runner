@@ -13,10 +13,12 @@ Sounds easy? Give it a try and see how far you can run!
 
 **Game demo:**
 
-https://github.com/user-attachments/assets/70587d26-e4b5-4821-9ba8-49a0665f0dfe
+
+https://github.com/user-attachments/assets/cd0c1824-008c-48c0-af18-d6513ec7ebf9
 
 **Design breakdown:**
 
-https://github.com/user-attachments/assets/faeb7bfb-01b8-4136-8327-e4c52b16d30f
+https://github.com/user-attachments/assets/f82a6042-4522-4011-afc6-f3f493343c66
+
 
 
