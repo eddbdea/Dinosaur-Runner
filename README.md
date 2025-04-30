@@ -15,3 +15,8 @@ Sounds easy? Give it a try and see how far you can run!
 
 https://github.com/user-attachments/assets/70587d26-e4b5-4821-9ba8-49a0665f0dfe
 
+**Design breakdown:**
+
+https://github.com/user-attachments/assets/faeb7bfb-01b8-4136-8327-e4c52b16d30f
+
+
