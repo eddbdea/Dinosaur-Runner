@@ -10,5 +10,6 @@
 - If you collide with an obstacle, the game ends and your final score is shown
 
 Sounds easy? Give it a try and see how far you can run!
+
 https://github.com/user-attachments/assets/70587d26-e4b5-4821-9ba8-49a0665f0dfe
 
